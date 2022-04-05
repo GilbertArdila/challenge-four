@@ -18,10 +18,12 @@ html{
     font-size: 62.5%;
 }
 body{
+    width: 100%;
+    height: auto;
     font-size: var(--main-font-size);
     font-family: 'Raleway', sans-serif;
     display: grid;
-    grid-template-rows: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 102px;
 }
 a{
     text-decoration: none;
@@ -45,6 +47,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    padding-top: 20px;
 }
 .header-up-section .header-logo{
     width: 100px;
@@ -82,14 +85,13 @@ header{
     width: 80%;
     height: 30px;
     margin: 0 auto;
+    padding: 0 20px;
 
 }
 .header-down-section{
     width: 100%;
     height: auto;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url('../img/honguito.jpg');
-
-    /* background-image: url('../img/honguito.jpg');*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; 
@@ -125,9 +127,174 @@ header{
 }
 main{
     width: 100%;
-    height: 500px;
+    height: auto;
+}
+.star_wars{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-top: 10px;
+}
+.texto{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.titulo{
+    margin-bottom: 10px;
+   font-weight: 700;
+   font-size: 2.2rem;
+   line-height: 2.583rem;
+   color:var(--main-text);
+   
+}
+.arrow{
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.644rem;
+    color: var(--main-blue);
+}
+.arrow span img{
+    width: 10.67px;
+    height: 10.67px;
+}
+.cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.star_wars .cards .oculta,
+.consolas .cards .oculta,
+.diversos .cards .oculta{
+    display: none;
+}
+.cards .card{
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.cards .card img{
+    width: 100%;
+    height: 174px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.cards .card p:nth-child(2){
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.644rem;
+    color: var(--main-text);
+    margin-bottom: 5px;
+
+}
+.cards .card p:nth-child(3){
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.878rem;
+    color: var(--main-text);
+    margin-bottom: 5px;
+
+}
+.cards .card a:nth-child(4){
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.644rem;
+}
+.contacto{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: var(--contact-background);
+}
+.politicas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ .politica-img{
+    width: 176px;
+    height: 50px;
+    display: flex;
+    align-self: center;
+}
+ .politica-img img{
+    width: 90%;
+    height: 90%;
+}
+.politicas a{
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.878rem;
+    margin: 10px 0;
+    text-align: center;
+    color:var(--main-text);
+
+}
+.formulario{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+.formulario input{
+    width: 90%;
+    height: 56px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 4px ;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: var(--secondary-text);
+}
+.formulario textarea{
+    width: 90%;
+    height: 62px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 20px ;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: var(--secondary-text);
+}
+.formulario .form-button{
+    width: 140px;
+    height: 40px;
+    padding: 12px 16px;
+    background-color: var(--main-blue);
+    border: none;
+    text-align: center;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+
 }
 footer{
     width: 100%;
-    height: 150px;
+    height: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
