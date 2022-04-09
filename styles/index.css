@@ -129,13 +129,16 @@ main{
     width: 100%;
     height: auto;
 }
-.star_wars{
+.star_wars,
+.consolas,
+.diversos{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    align-items: flex-end;
     padding-top: 10px;
 }
 .texto{
