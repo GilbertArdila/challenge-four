@@ -70,6 +70,9 @@ header{
     font-weight: bold;
     line-height: 1.644rem;
 }
+.header-up-section .header-button:hover{
+    background-color:#88b1e7;
+}
 .header-up-section  .header-searcher__logo{
     Width :17.05px;
     Height:17.06px;
@@ -125,6 +128,9 @@ header{
     font-size: 14px;
     line-height: 16px;
     color: var(--white);
+}
+.header-down-section a:hover{
+    opacity: 0.6;
 }
 main{
     width: 100%;
@@ -293,6 +299,9 @@ main{
     font-weight: 600;
     line-height: 1.6rem;
 
+}
+.formulario .form-button:hover{
+    opacity: 0.6;
 }
 footer{
     width: 100%;
