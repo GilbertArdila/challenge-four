@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar producto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/tablet.css" media="(min-width:768px)">
+    <link rel="stylesheet" href="../styles/desktop.css" media="(min-width:1200px)">
+    <link rel="stylesheet" href="../styles/agregarProducto.css">
+</head>
+<body>
+    <header>
+        <section class="header-up-section">
+            <img src="../img/Logo.png" alt="logo aluraGeek" class="header-logo">
+            <a href="../index.html" class="header-button">Inicio</a>
+            
+                
+           
+        </section>
+    </header>
+    <main>
+        <section class="agregar-nuevo">
+            <h3 class="agregar-title">Agregar nuevo producto</h3>
+
+            <div class="imagen">
+                <div class="agregarImagen">
+                    <span class="imagenMas">+</span>
+                    <p class="placeholder">  Agregar una imagen para el producto</p>
+                </div>
+                <p class="texto">o</p>
+                <input type="file" class="drop-image" aria-label="Busque en su dispositivo" data-drop>
+            </div>
+
+            <div class="descripcion">
+                <input type="text" class="nombre" data-nombre placeholder="Nombre del producto">
+                <input type="text" class="precio" data-precio placeholder="Precio del producto">
+                <textarea class="descripcion" data-descripcion placeholder="Descripcion del producto"></textarea>
+                <button class="form-button agregar" type="button">Agregar Producto</button>   
+            </div>
+
+        </section>
+
+        <section class="contacto">
+            <div class=" politica-img">
+                <img src="../img/Logo.png" alt="logo alura-geek">
+            </div>
+            <section class="politicas">
+                <a href="#">Quienes somos</a>
+                <a href="#">Politicas de seguridad</a>
+                <a href="#">Programa de fidelidad</a>
+                <a href="#">Nuestras tiendas</a>
+                <a href="#">Quiero una franquicia</a>
+                <a href="#">Anuncia aqu&iacute;</a>
+            </section>
+            <section class="formulario">
+                <h3 class="titulo">Cont&aacute;ctanos</h3>
+                <form action="#" class="contac-us">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <textarea  id="mensaje"placeholder="Escribe tu mensaje"></textarea>
+                    <button type="button" class="form-button">Enviar mensaje</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Desarrollado por Gilbert Ardila</p>
+        <p>2022</p>
+    </footer>
+</body>
+</html>

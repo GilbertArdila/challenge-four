@@ -109,5 +109,50 @@
         grid-template-columns: repeat(4,1fr);
        
     }
-
+/*media queries para agregarProductos.html*/
+.imagen .texto,
+.imagen .drop-image{
+    display: flex;
+}
+.agregar-nuevo .imagen{
+    display: grid;
+    grid-template-columns: 1fr,auto,1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+.agregar-nuevo .agregar-title{
+    margin-top: 30px;
+   padding: 0 40px;
+}
+.agregar-nuevo .imagen .agregarImagen{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 10px;
+}
+.agregar-nuevo .imagen .agregarImagen .imagenMas{
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/cargar.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+.agregar-nuevo .imagen .texto{
+    grid-column: 2/3;
+    grid-row: 1/2;
+   ;
+}
+.agregar-nuevo .imagen .drop-image{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 306px;
+    height: 95px;
+    padding: 20px 5px;
+    border: 1px solid var(--main-blue);
+    
+}
+.agregar-nuevo .imagen .drop-image::before{
+    content: "Busque en su dispositivo";
+    margin-bottom: 5px;
+}
 }

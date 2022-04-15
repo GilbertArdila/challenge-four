@@ -9,6 +9,9 @@
     --secondary-font-size:1.4rem;
     --title-font-size:3.2rem;
 }
+.header-up-section{
+    grid-template-rows: 1fr;
+}
 .form{
     width: 100%;
     height: auto;
@@ -45,19 +48,4 @@
     padding-left: 10px;
     border-radius: 4px;
     color:var(--secondary-text)  
-}
-.form-button{
-    width: 30%;
-    height: 40px;
-    max-width: 423px;
-    margin: 10px auto;
-    padding: 12px 16px;
-    background-color: var(--main-blue);
-    border: none;
-    text-align: center;
-    color: var(--white);
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.6rem;
-    cursor: pointer;
 }
