@@ -73,4 +73,9 @@
     .producto-main .related-products__cards .hide{
         display: flex;
     }
+    /*media queries para todos.html*/
+    main .todos .todos-up .todos-title {
+        font-size: 3.2rem;
+        line-height: 3.757rem;
+    }
 }

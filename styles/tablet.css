@@ -97,4 +97,17 @@
     .related-products .related-products__cards {
         grid-template-columns: repeat(4, 1fr);
     }
+ /* media queries para todos.html*/
+
+ main .todos .todos-up{
+   
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+    main .todos .todos-cards{
+        grid-template-columns: repeat(4,1fr);
+       
+    }
+
 }
