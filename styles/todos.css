@@ -73,6 +73,7 @@ main .todos .todos-up .form-button{
 }
 main .todos .todos-cards .todos-cards__card{
     width: 90%;
+    margin-bottom: 10px;
 }
 main .todos .todos-cards .product-img{
     width: 100%;
@@ -189,5 +190,6 @@ main .todos .todos-cards .price{
     font-weight: bold;
     line-height:1.878rem; 
     color: var(--main-text);
-    
+    margin-bottom: 10px;
 }
+
