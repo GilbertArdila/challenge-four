@@ -7,6 +7,38 @@
       "descripcion": "others",
       "clase": "imagen de marciano",
       "id": 1
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcU3BhY2VNYXJ0aWFuMS5wbmc=",
+      "nombre": "Marciano",
+      "precio": "12",
+      "descripcion": "star_wars",
+      "clase": "este es un marciano",
+      "id": 2
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcbmF2ZTMucG5n",
+      "nombre": "navecita",
+      "precio": "12.00",
+      "descripcion": "star_wars",
+      "clase": "navecita de starwars",
+      "id": 3
+    },
+    {
+      "foto": "",
+      "nombre": "gtrsg",
+      "precio": "25",
+      "descripcion": "others",
+      "clase": "jdtyetye56",
+      "id": 4
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcbmF2ZTMucG5n",
+      "nombre": "bdhyd",
+      "precio": "25",
+      "descripcion": "star_wars",
+      "clase": "hrthydtr",
+      "id": 5
     }
   ]
 }

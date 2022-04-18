@@ -19,6 +19,7 @@
         <section class="agregar-nuevo">
             <h3 class="agregar-title">Agregar nuevo producto</h3>
          <form action="#" class="product-form" data-form>
+
             <div class="imagen">
                 <input class="agregarImagen" type="file" data-drop placeholder="Agregar una imagen para el producto">
                </input>
@@ -27,17 +28,26 @@
                 <input type="file" class="drop-image" aria-label="Busque en su dispositivo" data-selected
                 accept="image/png, .jpeg, .jpg">
             </div>
+            <p id="error-foto" class="error"></p>
 
             <div class="descripcion">
                 
                     <input type="text" class="nombre" data-nombre placeholder="Nombre del producto">
-                    <input type="text" class="precio" data-precio placeholder="Precio del producto">
+                    <span id="error-nombre" class="error"></span>
+
+                    <input type="number" class="precio" data-precio placeholder="Precio del producto">
+                    <span id="error-precio" class="error"></span>
+
                     <select  class="clase" data-clase>
                         <option value="star_wars">Star Wars</option>
                         <option value="consoles">Consolas</option>
                         <option value="others">Diversos</option>
                     </select>
+                    
                     <textarea class="descripcion" data-descripcion placeholder="Descripcion del producto"></textarea>
+                    <span id="error-descripcion" class="error"></span>
+                   
+
                     <button class="form-button agregar" type="submit">Agregar Producto</button> 
               
                 

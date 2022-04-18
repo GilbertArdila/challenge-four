@@ -20,7 +20,7 @@ html{
 body{
     width: 100%;
     height: auto;
-    font-size: var(--main-font-size);
+    font-size: 1.6rem;
     font-family: 'Raleway', sans-serif;
     display: grid;
     grid-template-rows: 1fr auto 102px;
@@ -48,6 +48,10 @@ main{
     line-height:2.583rem ;
     margin: 10px 0;
     color: var(--main-text);
+}
+.product-form{
+    width: 100%;
+    height: auto;
 }
 .imagen,
 .descripcion{
@@ -106,4 +110,10 @@ main{
     width: 90%;
     height: 51px;
     margin: 0 auto;
+}
+.error{
+    font-size: 2rem;
+    color: red;
+    margin: 10px 0;
+    padding: 0 40px;
 }
