@@ -1,5 +1,12 @@
 {
-    "producto":[
-        
-    ]
+  "producto": [
+    {
+      "foto": "QzpcZmFrZXBhdGhcU3BhY2VNYXJ0aWFuMS5wbmc=",
+      "nombre": "Marciano",
+      "precio": "12.00",
+      "descripcion": "others",
+      "clase": "imagen de marciano",
+      "id": 1
+    }
+  ]
 }

@@ -65,22 +65,24 @@ main{
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    padding: 50px 0;
     align-items: center;
     text-align: center;
     border: 2px dotted var(--secondary-text);
     background-color: var(--white);
-
+    background-image: url('https://cdn1.iconfinder.com/data/icons/interface-travel-and-environment/64/plus-interface-128.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 48px;
     
 }
-.imagenMas{
-    font-size:3.867rem; ;
-    color: #C8C8C8;
-}
+
 .texto,
 .drop-image{
     display: none;
 }
-.descripcion input{
+.descripcion input,
+.descripcion select{
     width: 90%;
     height: 56px;
     border-radius: 4px;

@@ -18,28 +18,40 @@
     <main>
         <section class="agregar-nuevo">
             <h3 class="agregar-title">Agregar nuevo producto</h3>
-
+         <form action="#" class="product-form" data-form>
             <div class="imagen">
-                <div class="agregarImagen">
-                    <span class="imagenMas">+</span>
-                    <p class="placeholder">  Agregar una imagen para el producto</p>
-                </div>
+                <input class="agregarImagen" type="file" data-drop placeholder="Agregar una imagen para el producto">
+               </input>
+
                 <p class="texto">o</p>
-                <input type="file" class="drop-image" aria-label="Busque en su dispositivo" data-drop>
+                <input type="file" class="drop-image" aria-label="Busque en su dispositivo" data-selected
+                accept="image/png, .jpeg, .jpg">
             </div>
 
             <div class="descripcion">
-                <input type="text" class="nombre" data-nombre placeholder="Nombre del producto">
-                <input type="text" class="precio" data-precio placeholder="Precio del producto">
-                <textarea class="descripcion" data-descripcion placeholder="Descripcion del producto"></textarea>
-                <button class="form-button agregar" type="button">Agregar Producto</button>   
+                
+                    <input type="text" class="nombre" data-nombre placeholder="Nombre del producto">
+                    <input type="text" class="precio" data-precio placeholder="Precio del producto">
+                    <select  class="clase" data-clase>
+                        <option value="star_wars">Star Wars</option>
+                        <option value="consoles">Consolas</option>
+                        <option value="others">Diversos</option>
+                    </select>
+                    <textarea class="descripcion" data-descripcion placeholder="Descripcion del producto"></textarea>
+                    <button class="form-button agregar" type="submit">Agregar Producto</button> 
+              
+                
             </div>
-
+         </form>
         </section>
 
         <contacto-component></contacto-component>
     </main>
     <footer-component></footer-component>
+        <!-- link a uuid -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="../components/htmlComponents.js" type="text/javascript"></script>
+    <script src="../components/createProduct.js" type="module"></script>
 </body>
 </html>

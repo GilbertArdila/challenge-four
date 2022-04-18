@@ -114,35 +114,37 @@
 .imagen .drop-image{
     display: flex;
 }
-.agregar-nuevo .imagen{
+.agregar-nuevo .product-form .imagen{
     display: grid;
-    grid-template-columns: 1fr,auto,1fr;
+    grid-template-columns: 1fr 100px 1fr;
     grid-template-rows: 1fr;
     align-items: center;
 }
 .agregar-nuevo .agregar-title{
     margin-top: 30px;
-   padding: 0 40px;
+
 }
-.agregar-nuevo .imagen .agregarImagen{
+.agregar-nuevo .product-form .imagen .agregarImagen{
     grid-column: 1/2;
     grid-row: 1/2;
     padding: 10px;
 }
-.agregar-nuevo .imagen .agregarImagen .imagenMas{
-    width: 32px;
-    height: 32px;
+.agregar-nuevo .product-form .imagen .agregarImagen{
+    font-size: 18px;
     background-image: url('../img/cargar.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain
+    background-size: 42px;
+    
 }
+
 .agregar-nuevo .imagen .texto{
     grid-column: 2/3;
     grid-row: 1/2;
    ;
 }
 .agregar-nuevo .imagen .drop-image{
+    font-size: 18px;
     grid-column: 3/4;
     grid-row: 1/2;
     width: 306px;
@@ -155,4 +157,5 @@
     content: "Busque en su dispositivo";
     margin-bottom: 5px;
 }
+
 }
