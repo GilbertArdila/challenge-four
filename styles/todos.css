@@ -17,6 +17,15 @@
 html{
     font-size: 62.5%;
 }
+body{
+    width: 100%;
+    height: auto;
+   
+    font-size: var(--main-font-size);
+    font-family: 'Raleway', sans-serif;
+    display: grid;
+    grid-template-rows: 1fr auto 102px;
+}
 
 
 main{
@@ -50,7 +59,7 @@ main .todos{
     margin-bottom: 10px;
 }
 main .todos .todos-up .form-button{
-    width: 152px;
+    width: 200px;
     height: 40px;
     padding: 12px 16px;
     background-color: var(--main-blue);
