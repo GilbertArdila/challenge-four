@@ -1,5 +1,148 @@
 {
   "producto": [
-    
+    {
+      "foto": "QzpcZmFrZXBhdGhccG9jaWxsby5wbmc=",
+      "nombre": "Pocillo The Mandalorian",
+      "precio": "18.33",
+      "descripcion": "star_wars",
+      "clase": "Pocillo con la figura del madaloriano",
+      "id": 1
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcY2FiZXphcy5wbmc=",
+      "nombre": "Cabeza dark lord",
+      "precio": "23.55",
+      "descripcion": "star_wars",
+      "clase": "Figura tipo lego con la cabeza de dark lord",
+      "id": 2
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcam9kYS5wbmc=",
+      "nombre": "Figura miniatura de yoda",
+      "precio": "18.00",
+      "descripcion": "star_wars",
+      "clase": "Figura en miniatura de Yoda ",
+      "id": 3
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcbWFuZGFsb3JpYW4ucG5n",
+      "nombre": "Figura de acción del mandaloriano",
+      "precio": "35.19",
+      "descripcion": "star_wars",
+      "clase": "Figura móvil del mandaloriano ",
+      "id": 4
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcY29udHJvbC5wbmc=",
+      "nombre": "Control x-box 360",
+      "precio": "22.00",
+      "descripcion": "consoles",
+      "clase": "Control inalámbrico para x-box 360",
+      "id": 5
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcY29uc29sYV9henVsLnBuZw==",
+      "nombre": "Consola x-box one",
+      "precio": "123.18",
+      "descripcion": "consoles",
+      "clase": "Consola x-box one color azul",
+      "id": 6
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcbmludGVuZG8ucG5n",
+      "nombre": "Nintendo retro",
+      "precio": "112.99",
+      "descripcion": "consoles",
+      "clase": "Consola retro Nintendo",
+      "id": 7
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcY29udHJvbF9zd2ljaHQucG5n",
+      "nombre": "Controles nintendo-switch",
+      "precio": "23.55",
+      "descripcion": "consoles",
+      "clase": "Controles inalámbricos para Nintendo-switch",
+      "id": 8
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcY2FtaXNldGFfY29udHJvbC5wbmc=",
+      "nombre": "Camiseta Atari.com",
+      "precio": "16.33",
+      "descripcion": "others",
+      "clase": "Camiseta con el logo de Atari.com",
+      "id": 9
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcY2FtaXNldGFfY29udHJvbC5wbmc=",
+      "nombre": "Camiseta estampada",
+      "precio": "16.33",
+      "descripcion": "others",
+      "clase": "Camiseta  con estampado de control retro",
+      "id": 10
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcc29uaWMucG5n",
+      "nombre": "Figura Sonic",
+      "precio": "12.55",
+      "descripcion": "others",
+      "clase": "Figura de acción Sonic",
+      "id": 11
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcYmFieS5wbmc=",
+      "nombre": "Baby Yoda",
+      "precio": "25.33",
+      "descripcion": "star_wars",
+      "clase": "Figura de acción baby-Yoda",
+      "id": 12
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcZGFya19sb3JkLnBuZw==",
+      "nombre": "Figura Dark llord",
+      "precio": "25.77",
+      "descripcion": "star_wars",
+      "clase": "Figura de acción dark-lord",
+      "id": 13
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcYmFsY2tfYm94LnBuZw==",
+      "nombre": "Xbox one",
+      "precio": "104.00",
+      "descripcion": "consoles",
+      "clase": "Consola x-box one primera edición",
+      "id": 14
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcZ2FtZWJveS5wbmc=",
+      "nombre": "Game boy",
+      "precio": "66.44",
+      "descripcion": "consoles",
+      "clase": "Game boy retro",
+      "id": 15
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcZGVzcGVydGFkb3IucG5n",
+      "nombre": "Despertador",
+      "precio": "55.00",
+      "descripcion": "others",
+      "clase": "Despertador color rosa",
+      "id": 16
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhcdmlydHVhbC5wbmc=",
+      "nombre": "Gafas de realidad virtual",
+      "precio": "66.22",
+      "descripcion": "others",
+      "clase": "Gafas de realidad virtual marca tagami",
+      "id": 17
+    },
+    {
+      "foto": "QzpcZmFrZXBhdGhccGlja2FjaHUucG5n",
+      "nombre": "Peluche Pikachu",
+      "precio": "23.22",
+      "descripcion": "others",
+      "clase": "Peluche de pikachu altura 65cm",
+      "id": 18
+    }
   ]
 }
