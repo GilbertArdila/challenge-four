@@ -144,18 +144,38 @@
    ;
 }
 .agregar-nuevo .imagen .drop-image{
-    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     grid-column: 3/4;
     grid-row: 1/2;
     width: 306px;
     height: 95px;
     padding: 20px 5px;
     border: 1px solid var(--main-blue);
+    font-size: 18px;
+
     
+}
+
+.agregar-nuevo .imagen .drop-image button{
+    padding: 10px;
 }
 .agregar-nuevo .imagen .drop-image::before{
     content: "Busque en su dispositivo";
     margin-bottom: 5px;
 }
-
+#agregarImagen{
+    display: none;
+}
+#dropImage{
+    display: none;
+}
+.agregarImagen #dragText{
+    display: inline;
+}
+#boton-mobile{
+    display: none;
+}
 }

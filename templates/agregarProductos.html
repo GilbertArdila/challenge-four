@@ -21,12 +21,24 @@
          <form action="#" class="product-form" data-form>
 
             <div class="imagen">
-                <input class="agregarImagen" type="file" data-drop placeholder="Agregar una imagen para el producto">
-               </input>
+                <div class="agregarImagen" id="dropArea">
+                    <h2 id="dragText">Arrastra la imagen acá</h2>
+                   
+                    <input  type="file" data-drop placeholder="Agregar una imagen para el producto" id="agregarImagen">
+                   </input>
+                   <button type="button" id="boton-mobile">Seleciona la imagen</button>
+                </div>
+                
 
                 <p class="texto">o</p>
-                <input type="file" class="drop-image" aria-label="Busque en su dispositivo" data-selected
-                accept="image/png, .jpeg, .jpg">
+
+                <div class="drop-image">
+                    <h2 id="dragText">Busqua en tu dispositivo</h2>
+                    <input type="file" id="dropImage" data-selected
+                    accept="image/png, .jpeg, .jpg">
+                    <button type="button" id="drop_button">Seleciona la imagen</button>
+                </div>
+                
             </div>
             <p id="error-foto" class="error"></p>
 

@@ -80,7 +80,21 @@ main{
     background-size: 48px;
     
 }
+.agregarImagen_droped{
+    background-color: var(--main-blue);
 
+}
+.agregarImagen_over{
+   background-color: var(--secondary-text);
+
+}
+
+#dragText{
+    display: none;
+}
+#agregarImagen{
+    display: none;
+}
 .texto,
 .drop-image{
     display: none;
@@ -113,7 +127,6 @@ main{
 }
 .error{
     font-size: 2rem;
-    color: red;
     margin: 10px 0;
     padding: 0 40px;
 }
