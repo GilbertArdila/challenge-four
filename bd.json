@@ -1,7 +1,7 @@
 {
   "producto": [
     {
-      "foto": "QzpcZmFrZXBhdGhccG9jaWxsby5wbmc=",
+      "foto": "./img/pocillo.png",
       "nombre": "Pocillo The Mandalorian",
       "precio": "18.33",
       "descripcion": "star_wars",
