@@ -22,12 +22,15 @@ formulario.addEventListener("submit",(evento)=>{
     const descripcion=document.querySelector("[data-descripcion]").value;
     let picture;
     //verificamos el contenido de los campos para cargar la foto
+    
     picture =btoa(verificarFoto(dragFile, selectedFile, picture))
-     
+    console.log(picture)
+    console.log(atob(picture))
+  
     if (verificarCampos(nombre, precio, clase) === true &&
     picture!="") {
         //mandamos a llamar el método para crear el producto
-        clientServices.crearProducto(picture, nombre, precio, clase, descripcion).then(respuesta => {
+        clientServices.crearProducto(picture, nombre, precio,  descripcion,clase,).then(respuesta => {
             alert("El producto se ha creado satisfactoriamente");
         }).catch(error => alert("Se ha producido un error" + error));
     }
@@ -108,7 +111,7 @@ const verificarFoto=(dragFile,selectedFile,picture)=>{
         document.querySelector("[data-drop]").value="";
         picture=""
     }
-    
+       
     return picture; 
        
 }
@@ -173,7 +176,6 @@ const dragFile=document.querySelector("[data-drop]");
 //funciones para mostrar el nombre del archivo cargado
 selectedFile.addEventListener("change",(evento)=>{
     evento.preventDefault()
-    console.log(selectedFile.files[0].name)
     let mensaje=document.getElementById("error-foto");
     mensaje.style.color='blue';
     mensaje.innerText='se ha cargado '+selectedFile.files[0].name
@@ -186,4 +188,7 @@ dragFile.addEventListener("change",(evento)=>{
     mensaje.innerText='se ha cargado '+dragFile.files[0].name
     
 })
+
+
+
 

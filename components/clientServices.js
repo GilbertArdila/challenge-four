@@ -13,8 +13,15 @@ const crearProducto=(foto,nombre,precio,descripcion,clase)=>{
       })
 }
 
-
+//GET Mostrar productos
+const mostrarProducto=async ()=>{
+    const respuesta = await fetch(url);
+    //console.log(respuesta.json());
+    return await respuesta.json();
+   
+}
 
 export const clientServices={
     crearProducto,
+    mostrarProducto,
 }

@@ -2,7 +2,6 @@
 const buscador=document.getElementById("header-searcher__logo");
 const inputBuscador=document.getElementById("header-searcher__input");
 const estadoInput=inputBuscador.style;
-console.log(estadoInput.display)
 
 
     buscador.addEventListener("click", function(){

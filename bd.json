@@ -4,145 +4,146 @@
       "foto": "./img/pocillo.png",
       "nombre": "Pocillo The Mandalorian",
       "precio": "18.33",
-      "descripcion": "star_wars",
-      "clase": "Pocillo con la figura del madaloriano",
+      "descripcion":"Pocillo con la figura del madaloriano",
+      "clase":   "star_wars",
       "id": 1
     },
     {
       "foto": "QzpcZmFrZXBhdGhcY2FiZXphcy5wbmc=",
       "nombre": "Cabeza dark lord",
       "precio": "23.55",
-      "descripcion": "star_wars",
-      "clase": "Figura tipo lego con la cabeza de dark lord",
+      "descripcion":"Figura tipo lego con la cabeza de dark lord" ,
+      "clase": "star_wars",
       "id": 2
     },
     {
       "foto": "QzpcZmFrZXBhdGhcam9kYS5wbmc=",
       "nombre": "Figura miniatura de yoda",
       "precio": "18.00",
-      "descripcion": "star_wars",
-      "clase": "Figura en miniatura de Yoda ",
+      "descripcion":"Figura en miniatura de Yoda ",
+      "clase":  "star_wars",
       "id": 3
     },
     {
       "foto": "QzpcZmFrZXBhdGhcbWFuZGFsb3JpYW4ucG5n",
       "nombre": "Figura de acción del mandaloriano",
       "precio": "35.19",
-      "descripcion": "star_wars",
-      "clase": "Figura móvil del mandaloriano ",
+      "descripcion":"Figura móvil del mandaloriano ",
+      "clase":  "star_wars",
       "id": 4
     },
     {
       "foto": "QzpcZmFrZXBhdGhcY29udHJvbC5wbmc=",
       "nombre": "Control x-box 360",
       "precio": "22.00",
-      "descripcion": "consoles",
-      "clase": "Control inalámbrico para x-box 360",
+      "descripcion":"Control inalámbrico para x-box 360",
+      "clase":  "consoles",
       "id": 5
     },
     {
       "foto": "QzpcZmFrZXBhdGhcY29uc29sYV9henVsLnBuZw==",
       "nombre": "Consola x-box one",
       "precio": "123.18",
-      "descripcion": "consoles",
-      "clase": "Consola x-box one color azul",
+      "descripcion":"Consola x-box one color azul",
+      "clase":  "consoles",
       "id": 6
     },
     {
       "foto": "QzpcZmFrZXBhdGhcbmludGVuZG8ucG5n",
       "nombre": "Nintendo retro",
       "precio": "112.99",
-      "descripcion": "consoles",
-      "clase": "Consola retro Nintendo",
+      "descripcion":"Consola retro Nintendo",
+      "clase":  "consoles",
       "id": 7
     },
     {
       "foto": "QzpcZmFrZXBhdGhcY29udHJvbF9zd2ljaHQucG5n",
       "nombre": "Controles nintendo-switch",
       "precio": "23.55",
-      "descripcion": "consoles",
-      "clase": "Controles inalámbricos para Nintendo-switch",
+      "descripcion":"Controles inalámbricos para Nintendo-switch",
+      "clase":  "consoles",
       "id": 8
     },
     {
       "foto": "QzpcZmFrZXBhdGhcY2FtaXNldGFfY29udHJvbC5wbmc=",
       "nombre": "Camiseta Atari.com",
       "precio": "16.33",
-      "descripcion": "others",
-      "clase": "Camiseta con el logo de Atari.com",
+      "descripcion":"Camiseta con el logo de Atari.com",
+      "clase":  "others",
       "id": 9
     },
     {
       "foto": "QzpcZmFrZXBhdGhcY2FtaXNldGFfY29udHJvbC5wbmc=",
       "nombre": "Camiseta estampada",
       "precio": "16.33",
-      "descripcion": "others",
-      "clase": "Camiseta  con estampado de control retro",
+      "descripcion":"Camiseta  con estampado de control retro",
+      "clase":  "others",
       "id": 10
     },
     {
       "foto": "QzpcZmFrZXBhdGhcc29uaWMucG5n",
       "nombre": "Figura Sonic",
       "precio": "12.55",
-      "descripcion": "others",
-      "clase": "Figura de acción Sonic",
+      "descripcion": "Figura de acción Sonic",
+      "clase": "others",
       "id": 11
     },
     {
       "foto": "QzpcZmFrZXBhdGhcYmFieS5wbmc=",
       "nombre": "Baby Yoda",
       "precio": "25.33",
-      "descripcion": "star_wars",
-      "clase": "Figura de acción baby-Yoda",
+      "descripcion":"Figura de acción baby-Yoda" ,
+      "clase": "star_wars",
       "id": 12
     },
     {
       "foto": "QzpcZmFrZXBhdGhcZGFya19sb3JkLnBuZw==",
       "nombre": "Figura Dark llord",
       "precio": "25.77",
-      "descripcion": "star_wars",
-      "clase": "Figura de acción dark-lord",
+      "descripcion":"Figura de acción dark-lord" ,
+      "clase": "star_wars",
       "id": 13
     },
     {
       "foto": "QzpcZmFrZXBhdGhcYmFsY2tfYm94LnBuZw==",
       "nombre": "Xbox one",
       "precio": "104.00",
-      "descripcion": "consoles",
-      "clase": "Consola x-box one primera edición",
+      "descripcion":"Consola x-box one primera edición",
+      "clase":  "consoles",
       "id": 14
     },
     {
       "foto": "QzpcZmFrZXBhdGhcZ2FtZWJveS5wbmc=",
       "nombre": "Game boy",
       "precio": "66.44",
-      "descripcion": "consoles",
-      "clase": "Game boy retro",
+      "descripcion":"Game boy retro" ,
+      "clase": "consoles",
       "id": 15
     },
     {
       "foto": "QzpcZmFrZXBhdGhcZGVzcGVydGFkb3IucG5n",
       "nombre": "Despertador",
       "precio": "55.00",
-      "descripcion": "others",
-      "clase": "Despertador color rosa",
+      "descripcion": "Despertador color rosa",
+      "clase": "others",
       "id": 16
     },
     {
       "foto": "QzpcZmFrZXBhdGhcdmlydHVhbC5wbmc=",
       "nombre": "Gafas de realidad virtual",
       "precio": "66.22",
-      "descripcion": "others",
-      "clase": "Gafas de realidad virtual marca tagami",
+      "descripcion":"Gafas de realidad virtual marca tagami" ,
+      "clase": "others",
       "id": 17
     },
     {
       "foto": "QzpcZmFrZXBhdGhccGlja2FjaHUucG5n",
       "nombre": "Peluche Pikachu",
       "precio": "23.22",
-      "descripcion": "others",
-      "clase": "Peluche de pikachu altura 65cm",
+      "descripcion":"Peluche de pikachu altura 65cm" ,
+      "clase": "others",
       "id": 18
     }
+    
   ]
 }
