@@ -18,13 +18,17 @@
     </header>
     <main>
         <section class="form">
-            <form action="#" class="login-form">
+            <form action="#" class="login-form" data-form>
+
                 <p class="form-title">Iniciar Sesi&oacute;n</p>
-                <input type="text" placeholder="Escriba su correo electronico" class="mail-input">
-                <input type="password" placeholder="Escriba su contraseña" class="password-input">
-                <a href="../templates/productosAdmin.html">
-                <button type="button" class="form-button">
-                  Entrar </button> </a>
+
+                <input type="text" placeholder="Escriba su correo electronico" class="mail-input" data-email>
+
+                <input type="password" placeholder="Escriba su contraseña" class="password-input" data-password>
+                
+                
+                <button type="button" class="form-button" data-button>
+                  Entrar </button> 
             </form>
                
         </section>
@@ -33,5 +37,6 @@
    
     <footer-component></footer-component>
     <script src="../components/htmlComponents.js" type="text/javascript"></script>
+    <script src="../scripts/login.js"></script>
 </body>
 </html>

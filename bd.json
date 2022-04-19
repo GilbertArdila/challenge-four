@@ -1,36 +1,5 @@
 {
   "producto": [
-    {
-      "foto": "QzpcZmFrZXBhdGhcbmF2ZTMucG5n",
-      "nombre": "Marciano",
-      "precio": "12",
-      "descripcion": "others",
-      "clase": "Imagen de marciano",
-      "id": 1
-    },
-    {
-      "foto": "QzpcZmFrZXBhdGhcU3BhY2VNYXJ0aWFuMS5wbmc=",
-      "nombre": "algo",
-      "precio": "12",
-      "descripcion": "star_wars",
-      "clase": "124\n45",
-      "id": 2
-    },
-    {
-      "foto": "QzpcZmFrZXBhdGhcTGFzZXIzLnBuZw==",
-      "nombre": "Laser",
-      "precio": "12",
-      "descripcion": "others",
-      "clase": "Imagen fea de un disquelaser",
-      "id": 3
-    },
-    {
-      "foto": "QzpcZmFrZXBhdGhcU3BhY2VNYXJ0aWFuMS5wbmc=",
-      "nombre": "fhrth",
-      "precio": "10.22",
-      "descripcion": "star_wars",
-      "clase": "htyhft",
-      "id": 4
-    }
+    
   ]
 }
