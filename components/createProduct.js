@@ -1,4 +1,8 @@
 import { clientServices } from "./clientServices.js"
+import { verificarFoto } from "./dragZone.js";
+
+
+let fotoFile="";
 
 //capturamos el formulario
 const formulario=document.querySelector("[data-form]");
@@ -9,33 +13,26 @@ const mobile_button=document.getElementById("boton-mobile");
 //capturamos el area del div para solatar la imagen
 const areaImagen=document.getElementById("dropArea");
 
+let picture;
+
 //ponemos el formulario a la escucha de un evento imput
 formulario.addEventListener("submit",(evento)=>{
     evento.preventDefault();
     //capturamos los campos del formulario con su valor
-
-    const selectedFile=document.querySelector("[data-selected]").value;
-    const dragFile=document.querySelector("[data-drop]").value;
     const nombre=document.querySelector("[data-nombre]").value;
     const precio=document.querySelector("[data-precio]").value;
     const clase=document.querySelector("[data-clase]").value;
     const descripcion=document.querySelector("[data-descripcion]").value;
-    let picture;
-    //verificamos el contenido de los campos para cargar la foto
-    
-    picture =btoa(verificarFoto(dragFile, selectedFile, picture))
-    console.log(picture)
-    console.log(atob(picture))
-  
+   
+  //verificamos los campos nombre, precio y clase
     if (verificarCampos(nombre, precio, clase) === true &&
     picture!="") {
         //mandamos a llamar el método para crear el producto
-        clientServices.crearProducto(picture, nombre, precio,  descripcion,clase,).then(respuesta => {
+        clientServices.crearProducto(fotoFile, nombre, precio,  descripcion,clase,).then(respuesta => {
             alert("El producto se ha creado satisfactoriamente");
         }).catch(error => alert("Se ha producido un error" + error));
     }
-}
-);
+});
 //función para verificar los campos del input
 const verificarCampos=(nombre,precio)=>{
     let verificar=true;
@@ -78,116 +75,52 @@ const verificarCampos=(nombre,precio)=>{
      return verificar;
 }
 
-const verificarFoto=(dragFile,selectedFile,picture)=>{
-    if(selectedFile==="" && dragFile!=""){
-        picture=dragFile;
-        let mensaje=document.getElementById("error-foto");
-        mensaje.innerText=""
-        console.log(picture)
-        
-    }
-    if(selectedFile!="" && dragFile===""){
-        picture=selectedFile
-        let mensaje=document.getElementById("error-foto");
-       
-        
-        mensaje.innerText=""
-        
-    }
-    if(selectedFile==="" && dragFile===""){
-        let mensaje=document.getElementById("error-foto");
-        mensaje.style.color="red";
-        mensaje.innerText="Por favor ingrese la foto del producto"
-        
-        picture=""
-      
-   }
-   if(selectedFile!="" && dragFile!=""){
-    let mensaje=document.getElementById("error-foto");
-    mensaje.style.color="red";
-    mensaje.innerText="Por ingrese la foto en uno solo de los dos campos, no en los dos"
-        //limpiamos los dos campos de la imagen
-        const selectedFile=document.querySelector("[data-selected]").value="";
-        document.querySelector("[data-drop]").value="";
-        picture=""
-    }
-       
-    return picture; 
-       
-}
+const selectedFileInput=document.querySelector("[data-selected]");
+const dragFileInput=document.querySelector("[data-drop]")
 
-//funcion para abrir el input de las vistas grandes a traves del botón
-drop_button.addEventListener("click",(evento)=>{
-    const selectedFile=document.querySelector("[data-selected]");
-     //le asignamos la función click al input para que se abra el buscador de archivos
-    selectedFile.click();
-  
-})
-//función para abrir el input de la vista mobile a traves del botón
 
-mobile_button.addEventListener("click",(evento)=>{
-    const dropFile=document.querySelector("[data-drop]");
-   //le asignamos la función click al input para que se abra el buscador de archivos
-    dropFile.click();
-   
-})
-//funciónes de grag para el area de draging
-//al entrar en el area de draging
-areaImagen.addEventListener("dragover",(evento)=>{
-    evento.preventDefault();
-    areaImagen.classList.add("agregarImagen_over");
-    const texto=document.getElementById("dragText");
-    texto.innerText="Suelta la imagen acá"
-})
-//al salir del area de draging
-areaImagen.addEventListener("dragleave",(evento)=>{
-    evento.preventDefault();
-    areaImagen.classList.remove("agregarImagen_over");
-    const texto=document.getElementById("dragText");
-    texto.innerText="Arrastra la imagen acá"
-})
-//al soltar en el area de draging
-areaImagen.addEventListener("drop",(evento)=>{
-    evento.preventDefault();
-    evento.stopPropagation();
-    //capturamos el file
-    const dragFile=document.querySelector("[data-drop]");
-    //pasamos el archivo al input
-    dragFile.files=evento.dataTransfer.files;
-       //capturamos el span para mostrar mensaje
-    let mensaje=document.getElementById("error-foto");
-    //asignamos el archivo a una variable
-    let archivo=evento.dataTransfer.files;
-    //damos color al mensaje y le pasamos el nombre del archivo cargado
-    mensaje.style.color="blue";
-    mensaje.innerText="Usted ha cargado "+archivo[0].name
 
-    const texto=document.getElementById("dragText");
-    texto.innerText="Imagen cargada"
-
-    areaImagen.classList.remove("agregarImagen_over");
-    areaImagen.classList.add("agregarImagen_droped");
-   
-})
-
-const selectedFile=document.querySelector("[data-selected]");
-const dragFile=document.querySelector("[data-drop]");
-
-//funciones para mostrar el nombre del archivo cargado
-selectedFile.addEventListener("change",(evento)=>{
-    evento.preventDefault()
-    let mensaje=document.getElementById("error-foto");
-    mensaje.style.color='blue';
-    mensaje.innerText='se ha cargado '+selectedFile.files[0].name
+//ponemos los inputs a la escucha para convertir la imagen a base64
+selectedFileInput.addEventListener("change",()=>{
+      //verificamos el contenido de los campos para cargar la foto
+    picture =verificarFoto( picture)
     
+    let foto=picture;
+    /* Función para convertir a base64 las imagenes*/ 
+    if(foto.length>0){
+        let fileToLoad=foto[0];
+        let fileReader=new FileReader();
+        fileReader.onload=function (fileLoadEvent){
+            let base64=fileLoadEvent.target.result;
+            fotoFile=base64;
+            console.log(fotoFile);
+        }
+        fileReader.readAsDataURL(fileToLoad)
+    }
+   
+ 
 })
-dragFile.addEventListener("change",(evento)=>{
-    console.log("cambio")
-    let mensaje=document.getElementById("error-foto");
-    mensaje.style.color='blue';
-    mensaje.innerText='se ha cargado '+dragFile.files[0].name
+dragFileInput.addEventListener("change",()=>{
+    //verificamos el contenido de los campos para cargar la foto
+    picture =verificarFoto( picture)
+    let foto=picture;
+    /* Función para convertir a base64 las imagenes*/ 
+    if(foto.length>0){
+        let fileToLoad=foto[0];
+        let fileReader=new FileReader();
+        fileReader.onload=function (fileLoadEvent){
+            let base64=fileLoadEvent.target.result;
+            fotoFile=base64;
+            console.log(fotoFile);
+        }
+        fileReader.readAsDataURL(fileToLoad)
+    }
     
+ 
 })
+ 
+
+ 
 
 
 

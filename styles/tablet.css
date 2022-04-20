@@ -153,12 +153,14 @@
     width: 306px;
     height: 95px;
     padding: 20px 5px;
-    border: 1px solid var(--main-blue);
+    border: 1px solid var(--secondary-text);
     font-size: 18px;
 
     
 }
-
+.agregar-nuevo .imagen .droped-image{
+    border: 2px solid var(--main-blue);
+}
 .agregar-nuevo .imagen .drop-image button{
     padding: 10px;
 }
