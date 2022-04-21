@@ -22,11 +22,45 @@ return div;
 
 }
 //capturamos el seccion
-const seccion=document.querySelector(".cards");
+const starWars=document.querySelector(".starWars");
+const consolas=document.querySelector(".consolas_cards");
+const diversos=document.querySelector(".diversos_cards");
+
 //función para mostrar la lista de productos
 clientServices.mostrarProducto().then((data)=>{
+    //variables para adicionar clase oculta a las cards
+  let starWars_cards=0;
+  let consolas_cards=0;
+  let varios_cards=0;
+  
     data.forEach(({foto,nombre,precio,descripcion,clase,id})=>{
+
         const nuevaCard=crearTemplate(foto,nombre,precio,descripcion,clase,id);
-        seccion.appendChild(nuevaCard)
+        if(clase==='star_wars'){
+            starWars.appendChild(nuevaCard)
+            starWars_cards++;
+            if(starWars_cards>4){
+                nuevaCard.classList.add("oculta")
+            }
+            
+        }
+        else if(clase==='consoles'){
+            
+           consolas.appendChild(nuevaCard)
+           consolas_cards++;
+            if(consolas_cards>4){
+                nuevaCard.classList.add("oculta")
+            }
+           
+        }
+        else{
+            diversos.appendChild(nuevaCard)
+            varios_cards++
+            if(varios_cards>4){
+              nuevaCard.classList.add("oculta")
+            }
+          
+        }
+        
     })
 }).catch((error)=>alert("Ha ocurrido un error"))
