@@ -137,6 +137,18 @@ main{
     width: 100%;
     height: auto;
 }
+main .coincidencia{
+padding: 30px;
+}
+ .show_coincidences{
+    display: none;
+    margin: 10px calc(50% - 10px);
+    align-self: center;
+}
+main .show{
+    display: block;
+}
+
 .star_wars,
 .consolas,
 .diversos{
