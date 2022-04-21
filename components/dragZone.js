@@ -16,6 +16,7 @@ export const verificarFoto=(picture)=>{
   
    // si el archivo está en la zona drag and drop
     if(selectedFile==="" && dragFile!=""){
+        
         //capturamos los files del input
         const filesInput=document.querySelector("[data-drop]").files;
 
@@ -26,28 +27,22 @@ export const verificarFoto=(picture)=>{
         let nombrearchivo=dragFile.split('\\')[2];
         mensaje.style.color="blue";
         mensaje.innerText="se ha seleccionado "+nombrearchivo
-        
     }
 
     //si el archivo está en el input de selección
-    if(selectedFile!="" && dragFile===""){
+   else if(selectedFile!="" && dragFile===""){
+   
          //capturamos los files del input
         const filesInput=document.querySelector("[data-selected]").files;
 
         picture=filesInput
        
+        
     }
-       //si los dos inputs están vacíos
-    if(selectedFile==="" && dragFile===""){
-        //capturamos el elemento p 
-        let mensaje=document.getElementById("error-foto");
-        mensaje.style.color="red";
-        mensaje.innerText="Por favor ingrese la foto del producto"
-        picture=""
       
-   }
    //si los dos inputs tienen archivos
-   if(selectedFile!="" && dragFile!=""){
+  else if(selectedFile!="" && dragFile!=""){
+   
          //capturamos el elemento p 
     let mensaje=document.getElementById("error-foto");
     mensaje.style.color="red";
@@ -70,6 +65,7 @@ export const verificarFoto=(picture)=>{
         
         picture=""
      }
+     
        
     return picture; 
        
@@ -95,7 +91,8 @@ mobile_button.addEventListener("click",(evento)=>{
    
    
 })
-//funciónes de grag para el area de draging
+//funciónes de grag para el area de draging, la función drop se encuentra en el archivo createProduct.js
+
 //al entrar en el area de draging
 areaImagen.addEventListener("dragover",(evento)=>{
     evento.preventDefault();
@@ -112,34 +109,9 @@ areaImagen.addEventListener("dragleave",(evento)=>{
     texto.innerText="Arrastra la imagen acá"
 })
 
-//al soltar en el area de draging
-areaImagen.addEventListener("drop",(evento)=>{
-    evento.preventDefault();
-    evento.stopPropagation();
-    //capturamos el file
-    const dragFile=document.querySelector("[data-drop]");
-    //pasamos el archivo al input
-    dragFile.files=evento.dataTransfer.files;
-       //capturamos el span para mostrar mensaje
-    let mensaje=document.getElementById("error-foto");
-    //asignamos el archivo a una variable
-    let archivo=evento.dataTransfer.files;
-    //damos color al mensaje y le pasamos el nombre del archivo cargado
-    mensaje.style.color="blue";
-    mensaje.innerText="Usted ha cargado "+archivo[0].name
 
-    const texto=document.getElementById("dragText");
-    texto.innerText="Imagen cargada"
-
-    areaImagen.classList.remove("agregarImagen_over");
-    areaImagen.classList.add("agregarImagen_droped");
-
-    
-   
-})
 
 const selectedFile=document.querySelector("[data-selected]");
-const dragFile=document.querySelector("[data-drop]");
 
 //funcion para mostrar el nombre del archivo cargado los input de selección
 selectedFile.addEventListener("change",(evento)=>{
@@ -151,18 +123,9 @@ selectedFile.addEventListener("change",(evento)=>{
    //cambiamos de color el borde del area como indicador
     let area=document.querySelector(".drop-image");
     area.classList.add("droped-image")
-    
-    
-})
-dragFile.addEventListener("change",(evento)=>{
-    let mensaje=document.getElementById("error-foto");
-    mensaje.style.color='blue';
-    mensaje.innerText='se ha cargado '+dragFile.files[0].name
-
-   
-
 
     
     
 })
+
 

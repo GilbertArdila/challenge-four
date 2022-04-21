@@ -1,19 +1,14 @@
 import { clientServices } from "./clientServices.js"
 import { verificarFoto } from "./dragZone.js";
-
-
-let fotoFile="";
+//variable para poner la imagen en base64
+let fotoFile;
+//variable para verificar que la imagen se cargue corectamente el el input
+let picture;
 
 //capturamos el formulario
 const formulario=document.querySelector("[data-form]");
-//capturamos el botón dentro del input data-selected
-const drop_button=document.getElementById("drop_button");
-//capturamos el botón dentro del input data-drop
-const mobile_button=document.getElementById("boton-mobile");
 //capturamos el area del div para solatar la imagen
 const areaImagen=document.getElementById("dropArea");
-
-let picture;
 
 //ponemos el formulario a la escucha de un evento imput
 formulario.addEventListener("submit",(evento)=>{
@@ -23,7 +18,20 @@ formulario.addEventListener("submit",(evento)=>{
     const precio=document.querySelector("[data-precio]").value;
     const clase=document.querySelector("[data-clase]").value;
     const descripcion=document.querySelector("[data-descripcion]").value;
+     //capturamos los input
+     const selectedFile=document.querySelector("[data-selected]").value;
+     const dragFile=document.querySelector("[data-drop]").value;
    
+    //verificamos si los dos inpputs están vacios
+     if(selectedFile==="" && dragFile===""){
+       
+        //capturamos el elemento p 
+        let mensaje=document.getElementById("error-foto");
+        mensaje.style.color="red";
+        mensaje.innerText="Por favor ingrese la foto del producto"
+        picture=""
+      
+   }
   //verificamos los campos nombre, precio y clase
     if (verificarCampos(nombre, precio, clase) === true &&
     picture!="") {
@@ -93,7 +101,7 @@ selectedFileInput.addEventListener("change",()=>{
         fileReader.onload=function (fileLoadEvent){
             let base64=fileLoadEvent.target.result;
             fotoFile=base64;
-            console.log(fotoFile);
+           
         }
         fileReader.readAsDataURL(fileToLoad)
     }
@@ -111,17 +119,57 @@ dragFileInput.addEventListener("change",()=>{
         fileReader.onload=function (fileLoadEvent){
             let base64=fileLoadEvent.target.result;
             fotoFile=base64;
-            console.log(fotoFile);
+            
         }
         fileReader.readAsDataURL(fileToLoad)
     }
     
  
+ })
+ 
+
+ 
+//al soltar en el area de draging
+areaImagen.addEventListener("drop",(evento)=>{
+    evento.preventDefault();
+    evento.stopPropagation();
+    //capturamos el file
+    const dragFile=document.querySelector("[data-drop]");
+    //pasamos el archivo al input
+    dragFile.files=evento.dataTransfer.files;
+       //capturamos el span para mostrar mensaje
+    let mensaje=document.getElementById("error-foto");
+    //asignamos el archivo a una variable
+    let archivo=evento.dataTransfer.files;
+    //damos color al mensaje y le pasamos el nombre del archivo cargado
+    mensaje.style.color="blue";
+    mensaje.innerText="Usted ha cargado "+archivo[0].name
+
+    const texto=document.getElementById("dragText");
+    texto.innerText="Imagen cargada"
+
+    areaImagen.classList.remove("agregarImagen_over");
+    areaImagen.classList.add("agregarImagen_droped");
+
+
+    //verificamos el contenido de los campos para cargar la foto
+    picture =verificarFoto( picture)
+    let foto=picture;
+    /* Función para convertir a base64 las imagenes*/ 
+    if(foto.length>0){
+        let fileToLoad=foto[0];
+        let fileReader=new FileReader();
+        fileReader.onload=function (fileLoadEvent){
+            let base64=fileLoadEvent.target.result;
+            fotoFile=base64;
+            
+        }
+        fileReader.readAsDataURL(fileToLoad)
+    }
+
+    
+   
 })
- 
-
- 
-
 
 
 
