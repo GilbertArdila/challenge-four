@@ -16,12 +16,18 @@ const crearProducto=(foto,nombre,precio,descripcion,clase)=>{
 //GET Mostrar productos
 const mostrarProducto=async ()=>{
     const respuesta = await fetch(url);
-    //console.log(respuesta.json());
     return await respuesta.json();
    
+}
+//Obtenemos los datos de los productos para mostrarlos para el PUT
+const datosProducto=async (id)=>{
+    const respuesta = await fetch(url+`${id}`);
+    return await respuesta.json();
 }
 
 export const clientServices={
     crearProducto,
     mostrarProducto,
+    datosProducto,
 }
+

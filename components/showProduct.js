@@ -1,5 +1,5 @@
 import { clientServices } from "./clientServices.js";
-
+import { obtener } from "./showAll.js";
 
 
 //declaracion de constantes y variables
@@ -7,11 +7,13 @@ const datos = [];
 let productos;
 const buscador = document.querySelector(".header-searcher__input")
 const coincidencia = document.querySelector(".coincidencia");
-const textoBusqueda=document.querySelector(".show_coincidences");
+const textoBusqueda = document.querySelector(".show_coincidences");
 //capturamos el seccion
 const starWars = document.querySelector(".starWars");
 const consolas = document.querySelector(".consolas_cards");
 const diversos = document.querySelector(".diversos_cards");
+const linkTodos=document.querySelector(".link");
+
 
 
 //función para crear el template
@@ -83,8 +85,8 @@ clientServices.mostrarProducto().then((data) => {
 
 
 //funcion para el buscador
- buscador.addEventListener("keyup", () => {
-    
+buscador.addEventListener("keyup", () => {
+
     //vaciamos el template
     coincidencia.innerHTML = "";
     const busqueda = buscador.value.toLowerCase();
@@ -93,12 +95,12 @@ clientServices.mostrarProducto().then((data) => {
     productos.forEach(producto => {
         //capturamos las descripciones de cada producto
         let descripcion = producto.descripcion.toLowerCase();
-       
+
 
         //buscamos las coincidencias
         if (descripcion.indexOf(busqueda) !== -1) {
-             textoBusqueda.classList.add("show")
-             
+            textoBusqueda.classList.add("show")
+
             //adicionamos las cards al section
             coincidencia.innerHTML += `
               <div class="card busqueda">
@@ -108,23 +110,31 @@ clientServices.mostrarProducto().then((data) => {
               <a href="./templates/producto.html" id=${producto.id}>Ver Producto</a>
               </div>
               `
-             
+
         }
         //si el buscador no tiene nada escrito
-        if(buscador.value===""){
+        if (buscador.value === "") {
             textoBusqueda.classList.remove("show")
-            var remover=document.querySelector(".busqueda")
+            var remover = document.querySelector(".busqueda")
             coincidencia.removeChild(remover);
-           
-           
+
+
         }
         //si no se halló coincidencia se quitan los resultados que se venian mostrando hasta el momento
-        if(coincidencia.innerHTML===''){
+        if (coincidencia.innerHTML === '') {
             textoBusqueda.classList.remove("show")
         }
-        
-        
+
+
     })
 
 
 })
+
+//función para el link a cada sección
+linkTodos.addEventListener("click",()=>{
+    //llamamos la función para obtener los datos de los productos y le pasamos el id del link que realiza la función
+    obtener.obtenerDatosProductos(linkTodos.id)
+})
+
+

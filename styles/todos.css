@@ -113,7 +113,7 @@ main .todos .todos-cards .product-img .edit{
     background-repeat: no-repeat;
     background-size: cover;
 }
-main .todos .todos-cards .one{
+/* main .todos .todos-cards .one{
     background-image: url('../img/pocillo.png');
 
 }
@@ -184,7 +184,7 @@ main .todos .todos-cards .seventeen{
 main .todos .todos-cards .eighteen{
     background-image: url('../img/pickachu.png');
 
-}
+} */
 
 main .todos .todos-cards .title,
 main .todos .todos-cards .id{
