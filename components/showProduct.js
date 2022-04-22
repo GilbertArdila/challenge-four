@@ -1,5 +1,4 @@
 import { clientServices } from "./clientServices.js";
-import { obtener } from "./showAll.js";
 
 
 //declaracion de constantes y variables
@@ -12,12 +11,11 @@ const textoBusqueda = document.querySelector(".show_coincidences");
 const starWars = document.querySelector(".starWars");
 const consolas = document.querySelector(".consolas_cards");
 const diversos = document.querySelector(".diversos_cards");
-const linkTodos=document.querySelector(".link");
 
 
 
 //función para crear el template
-const crearTemplate = (foto, nombre, precio, descripcion, clase, id) => {
+export const crearTemplate = (foto, nombre, precio, descripcion, clase, id) => {
     //creamos el div contendor
     const div = document.createElement("div");
     div.classList.add("card");
@@ -80,7 +78,7 @@ clientServices.mostrarProducto().then((data) => {
     })
 
 
-}).catch((error) => alert("Ha ocurrido un error"))
+}).catch((error) => alert("Ha ocurrido un error !!!"))
 
 
 
@@ -131,10 +129,6 @@ buscador.addEventListener("keyup", () => {
 
 })
 
-//función para el link a cada sección
-linkTodos.addEventListener("click",()=>{
-    //llamamos la función para obtener los datos de los productos y le pasamos el id del link que realiza la función
-    obtener.obtenerDatosProductos(linkTodos.id)
-})
+
 
 
