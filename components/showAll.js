@@ -13,10 +13,13 @@ const section=document.querySelector(".todos-cards")
    
        //creamos el contenido del div
        const contenido = `
-      <img src="${foto}" alt="${nombre}" class=".product-img">
-      <p>${descripcion}</p>
-      <p>$ ${precio}</p>
-      <a href="./templates/producto.html" id=${id}>Ver Producto</a>
+       <div class="product-img">
+      <img src="${foto}" alt="${nombre}">
+      </div>
+      <h3 class="title">${descripcion}</h3>
+      <p class="price">${precio}</p>
+      <a href="../templates/producto.html" id=${id} >Ver Producto</a>
+      
       `
        //agregamos el contenido al div
        div.innerHTML = contenido;
