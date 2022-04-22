@@ -13,6 +13,9 @@
     .header-down-section{
         padding: 0 70px;
     }
+   main .arrow{
+        display: none;
+    }
     .cards{
         width: 90%;
         justify-content: space-evenly;

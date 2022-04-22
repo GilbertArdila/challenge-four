@@ -17,7 +17,7 @@ const section=document.querySelector(".todos-cards")
       <img src="${foto}" alt="${nombre}">
       </div>
       <h3 class="title">${descripcion}</h3>
-      <p class="price">${precio}</p>
+      <p class="price">$${precio}</p>
       <a href="../templates/producto.html" id=${id} >Ver Producto</a>
       
       `
