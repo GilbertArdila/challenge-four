@@ -15,7 +15,7 @@ const diversos = document.querySelector(".diversos_cards");
 
 
 //función para crear el template
-export const crearTemplate = (foto, nombre, precio, descripcion, clase, id) => {
+ const crearTemplate = (foto, nombre, precio, descripcion, clase, id) => {
     //creamos el div contendor
     const div = document.createElement("div");
     div.classList.add("card");
@@ -25,13 +25,18 @@ export const crearTemplate = (foto, nombre, precio, descripcion, clase, id) => {
    <img src="${foto}" alt="${nombre}" class="card-img">
    <p>${descripcion}</p>
    <p>$ ${precio}</p>
-   <a href="./templates/producto.html" id=${id}>Ver Producto</a>
+   <a href="./templates/producto.html?id=${id}"
+   >Ver Producto</a>
    `
     //agregamos el contenido al div
     div.innerHTML = contenido;
 
     return div;
-
+  /*
+  le agregamos el id a la direccion del href para poder captar el id del producto que vamos a mostrar
+   <a href="./templates/producto.html?id=${id}"
+   >Ver Producto</a>
+  */
 }
 
 
@@ -129,6 +134,8 @@ buscador.addEventListener("keyup", () => {
 
 })
 
-
+export const exportarTemplate={
+    crearTemplate,
+}
 
 

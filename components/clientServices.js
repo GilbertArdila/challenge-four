@@ -21,7 +21,7 @@ const mostrarProducto=async ()=>{
 }
 //Obtenemos los datos de los productos para mostrarlos para el PUT
 const datosProducto=async (id)=>{
-    const respuesta = await fetch(url+`${id}`);
+    const respuesta = await fetch(url+`/${id}`);
     return await respuesta.json();
 }
 

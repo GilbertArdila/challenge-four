@@ -13,21 +13,19 @@
 </head>
 <body>
     <header>
-        <header-component></header-component>
+        <searcher-component></searcher-component>
     </header>
     <main class="producto-main">
+        <h3 class="show_coincidences ">Resultados busqueda</h3>
+        <section class="cards coincidencia "></section>
+
         <section class="main-product">
-            <div class="main-product__photo"></div>
-            <div class="main-product__text">
-                <h3 class="title">Producto XYZ</h3>
-                <p class="price">$ 60.00</p>
-                <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro labore doloremque sed dolorem. Commodi aspernatur fugit dicta praesentium, at, neque saepe nemo veritatis dignissimos, aliquam assumenda atque? Earum, excepturi quibusdam.</p>
-            </div>
+           
         </section>
         <section class="related-products">
             <p class="related-products__title">Productos similares</p>
             <section class="related-products__cards">
-               <div class="related-card">
+               <!-- <div class="related-card">
                    <div class="product-img one"></div>
                    <h3 class="title">Producto XYZ</h3>
                    <p class="price">$60.00</p>
@@ -67,7 +65,7 @@
                 <h3 class="title">Producto XYZ</h3>
                 <p class="price">$60.00</p>
                 <a href="#" class="ver">Ver producto</a>
-            </div>
+            </div> -->
             </section>
         </section>
         <contacto-component></contacto-component>
@@ -75,6 +73,8 @@
     
     <footer-component></footer-component>
     <script src="../components/htmlComponents.js" type="text/javascript"></script>
+    <script src="../components/showEachproduct.js" type="module"></script>
+    <script src="../scripts/index.js"></script>
 
 </body>
 </html>

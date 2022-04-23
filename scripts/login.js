@@ -23,7 +23,7 @@ button.addEventListener("click",(event)=>{
         
         if( usuario.email===email.value && usuario.password===password.value){
             if(email.value==='admin@gmail.com'){
-                window.location.href='../templates/agregarProductos.html';
+                window.location.href='../templates/productosAdmin.html';
             }
            
         }else{

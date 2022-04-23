@@ -38,13 +38,34 @@ const section=document.querySelector(".todos-cards")
   
  //función para mostrar la lista de productos
 mostrarProductoPorClase().then((data) => {
+    let tituloClase="";
+    const titulo=document.querySelector(".todos-title")
+    if(data[0].clase==='star_wars'){
+        tituloClase="Star Wars"
+    }
+    else if(data[0].clase==="consoles"){
+        tituloClase ='Consolas'
+    }else{
+        tituloClase='otros'
+    }
+  
   
  data.forEach(({ foto, nombre, precio, descripcion, clase, id }) => {
 
     const nuevaCard = crearTemplateTodos(foto, nombre, precio, descripcion, clase, id);
     if (clase ===idLink ) {
+      
         section.appendChild(nuevaCard)
+        if(idLink==='star_wars'){
+            tituloClase="Star Wars"
+        }
+        else if(idLink==="consoles"){
+            tituloClase ='Consolas'
+        }else{
+            tituloClase='Diversos'
+        }
     }
+    titulo.innerText="Estas viendo productos de la clase "+tituloClase
     
     
 

@@ -17,6 +17,28 @@ class   Header extends HTMLElement{
 }
 customElements.define('header-component',Header);
 
+/* **************************************************** */
+class searcher extends HTMLElement{
+    constructor(){
+        super();
+    };
+    connectedCallback(){
+        this.innerHTML = `
+        <section class="header-up-section">
+            <img src="../img/Logo.png" alt="logo aluraGeek" class="header-logo">
+            <a href="../index.html" class="header-button">Inicio</a>
+            <img src="../img/find.png" alt="buscador" class="header-searcher__logo" id="header-searcher__logo">
+
+            <input class="header-searcher__input" id="header-searcher__input" placeholder="¿Qué deseas buscar?"></input>
+
+        </section>
+        `;
+    }
+}
+customElements.define('searcher-component',searcher);
+
+/* **************************************************** */
+
 class Contacto extends HTMLElement{
     constructor(){
         super();
@@ -50,6 +72,8 @@ class Contacto extends HTMLElement{
 }
 customElements.define('contacto-component',Contacto);
 
+/* **************************************************** */
+
 class Footer extends HTMLElement{
     constructor(){
         super();
@@ -65,3 +89,5 @@ class Footer extends HTMLElement{
     }
 }
 customElements.define('footer-component',Footer);
+
+/* **************************************************** */
