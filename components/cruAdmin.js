@@ -20,7 +20,7 @@ let productos;
     <div class="product-img one">
     <img src="${foto}" alt="">
     <a class="delete" href="#"></a>
-    <a class="edit" href="#"></a>
+    <a class="edit" href="../templates/edit.html"></a>
     </div>
     <h3 class="title">${nombre}</h3>
     <p class="price">$${precio}</p>

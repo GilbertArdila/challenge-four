@@ -87,7 +87,10 @@ clientServices.mostrarProducto().then((data) => {
 
 
 
+
+
 //funcion para el buscador
+
 buscador.addEventListener("keyup", () => {
 
     //vaciamos el template
@@ -133,6 +136,8 @@ buscador.addEventListener("keyup", () => {
 
 
 })
+
+
 
 export const exportarTemplate={
     crearTemplate,
