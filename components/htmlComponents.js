@@ -1,3 +1,6 @@
+/*
+los estilos de estos componentes se encuentran en el documento index.css
+*/
 class   Header extends HTMLElement{
     constructor(){
         super();

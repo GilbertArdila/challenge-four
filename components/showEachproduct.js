@@ -15,7 +15,6 @@ const datosProducto = async () => {
     //obtenemos el id del cliente a actualizar con el id que le pasamos al href en el template de showProducts.js
     const url = new URL(window.location);
     id = url.searchParams.get("id");
-    console.log(id)
     //verificamos que el id no esté vacío
     if (id === null) {
 

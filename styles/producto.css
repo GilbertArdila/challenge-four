@@ -42,6 +42,10 @@ body{
 }
 .related-products{
     padding: 10px;
+    align-items: center;
+}
+.main-product{
+    align-items: center;
 }
 .main-product__photo{
     width: 90%;
@@ -80,6 +84,26 @@ body{
     font-weight: 400;
     color: var(--main-text);
 }
+/*para las cards del buscador*/
+.busqueda{
+   margin: 0 50px;
+}
+/*para la card del main produc*/
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 176px;
+    height: auto;
+}
+.photo img{
+width: 100%;
+height: 174px;
+}
+.main-product_text{
+    width: 100%;
+    height: auto;
+}
+
 .related-products .related-products__title{
     font-size: 2.2rem;
     line-height: 2.583rem;
@@ -92,7 +116,8 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
-    justify-content: center;
+   
+   justify-items: center;
    
 }
 .related-card{
@@ -166,4 +191,54 @@ body{
     line-height: 1.644rem;
     font-weight: bold;
     color: var(--main-blue);
+}
+@media (min-width:768px){
+    .producto-main .main-product {
+        flex-direction: row;
+        padding: 0 20px;
+    }
+    .producto-main .main-product .main-product__photo{
+   width: 254px;
+   height: 157px;
+    }
+    .main-product__text{
+        margin-right: 30px;
+    }
+    
+}
+@media (min-width:1200px){
+    .main-product .main-product__photo{
+        width: 560px;
+        height: 403px;
+    }
+    .main-product .main-product__text{
+        width: 100%;
+        padding: 10px 10px;
+    }
+    .main-product .main-product__text .title {
+        font-size: 3.2rem;
+        line-height: 3.105rem;
+       
+    }
+    .main-product .main-product__text .description {
+        font-size: 1.6rem;
+        line-height: 1.878rem;
+       
+    }
+    .producto-main .related-products .related-products__title{
+        font-size: 3.2rem;
+        line-height: 3.757rem;
+    }
+    .producto-main .related-card .ver {
+        font-size: 1.6rem;
+        line-height: 1.878rem;
+        
+    }
+    .related-products .related-products__cards{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .producto-main .related-products__cards .hide{
+        display: flex;
+    }
+    
 }

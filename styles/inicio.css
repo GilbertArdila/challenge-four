@@ -1,0 +1,143 @@
+/*estilos para la página index.css*/
+.header-down-section{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url('../img/honguito.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.header-down-section h3{
+    margin-top: 20%;
+    margin-left: 10px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.583rem;
+}
+.header-down-section h4{
+    font-size: 1.4rem;
+    font-style: normal;
+    line-height: 1.644rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-left: 10px;
+}
+.header-down-section a{
+    display: block;
+    width: 119px;
+    height: 40px;
+    background-color: var(--main-blue);
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--white);
+}
+.header-down-section a:hover{
+    opacity: 0.6;
+}
+
+    .star_wars,
+    .consolas,
+    .diversos{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        align-items: flex-end;
+        padding-top: 10px;
+    }
+    .texto{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+    }
+    .titulo{
+        margin-bottom: 10px;
+       font-weight: 700;
+       font-size: 2.2rem;
+       line-height: 2.583rem;
+       color:var(--main-text);
+       
+    }
+    .arrow{
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.644rem;
+        color: var(--main-blue);
+    }
+    .arrow span img{
+        width: 10.67px;
+        height: 10.67px;
+    }
+    .cards{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .star_wars .cards .oculta,
+    .consolas .cards .oculta,
+    .diversos .cards .oculta{
+        display: none;
+    }
+    .cards .card{
+        width: 156px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    .cards .card img{
+        width: 100%;
+        height: 174px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+    .cards .card p:nth-child(2){
+        width: 156px;
+        height: auto;
+        min-height: 46px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.644rem;
+        color: var(--main-text);
+        margin-bottom: 5px;
+    
+    }
+    .cards .card p:nth-child(3){
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.878rem;
+        color: var(--main-text);
+        margin-bottom: 5px;
+    
+    }
+    .cards .card a:nth-child(4){
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.644rem;
+    }
+    @media (min-width:1200px){
+        main .arrow{
+            display: none;
+        }
+        .cards{
+            width: 90%;
+            justify-content: space-evenly;
+            margin: 0 auto;
+        }
+        .star_wars .cards .oculta,
+        .consolas .cards .oculta,
+        .diversos .cards .oculta{
+            display: flex;
+        }
+    }

@@ -4,7 +4,7 @@ const inputBuscador=document.getElementById("header-searcher__input");
 const estadoInput=inputBuscador.style;
 const linkTodos=document.getElementsByClassName("link")
 
-
+//función para que el buscador aparezca en la vista mobile
 
     buscador.addEventListener("click", function(){
         if(estadoInput.display==="" || estadoInput.display==="none" ){
