@@ -205,6 +205,32 @@ footer{
     justify-content: center;
     align-items: center;
 }
+/*estilos para el mensaje de envio del formulario*/
+.messages-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    bottom: calc(0);
+    left: calc(37%);
+    border: 1px solid blue;
+  
+    background-color: white;
+    padding: 10px;
+}
+.messages-container__body{
+    margin: 10px auto;
+}
+.messages-container__buton{
+    width: 50%;
+    border: 1px solid blue;
+    border-radius: 10px;
+    align-self: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
 @media (min-width:768px){
     .header-up-section {
