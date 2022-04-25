@@ -64,9 +64,11 @@ class Contacto extends HTMLElement{
         <section class="formulario">
             <h3 class="titulo">Cont&aacute;ctanos</h3>
             <form action="#" class="contac-us">
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                <textarea  id="mensaje"placeholder="Escribe tu mensaje"></textarea>
-                <button type="button" class="form-button">Enviar mensaje</button>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="name">
+                <p class="avisoNombre"></p>
+                <textarea  id="mensaje"placeholder="Escribe tu mensaje" class="mensaje"></textarea>
+                <p class="avisoMensaje"></p>
+                <button type="button" class="form-button btn">Enviar mensaje</button>
             </form>
         </section>
     </section>        
