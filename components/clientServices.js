@@ -25,9 +25,26 @@ const datosProducto=async (id)=>{
     return await respuesta.json();
 }
 
+const actualizarProducto=async(foto,nombre,precio,descripcion,clase,id)=>{
+    try{
+       const respuesta= await fetch(url+`/${id}`,{
+        method: 'PUT',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body:JSON.stringify({foto,nombre,precio,descripcion,clase})
+       });
+       return respuesta
+    }catch (error) {
+        return console.log(error);
+    }
+
+}
+
 export const clientServices={
     crearProducto,
     mostrarProducto,
     datosProducto,
+    actualizarProducto
 }
 

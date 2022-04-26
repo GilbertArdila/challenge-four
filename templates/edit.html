@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Editar Producto</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/edit.css">
+
 </head>
 <body>
-    <h3>editar</h3>
-    
+    <header class="edit">
+        <header-component></header-component>
+    </header>
+    <main>
+        <section class="update">
+            <form action="#" class="update-form" data-update_form>
+
+               
+                <div class="imagen-container">
+                  
+                    <img src="" alt="" class="imagenCargada">
+                    <h2 id="imagen-container__texto">Busca en tu dispositivo otra imagen</h2>
+                    <input type="file" class="foto" id="foto" data-update_foto></input>
+                    <button type="button" class=" imagen-container__button" id="imagen-container__button">Seleciona la imagen</button>
+                </div>
+                <p class="foto-name"></p>
+
+                <label for="nombre">Nombre</label>
+                <input class="nombre" id="nombre" data-update_nombre></input>
+
+                <label for="precio">Precio</label>
+                <input class="precio" id="precio" data-update_precio></input>
+
+               
+                <label for="clase">Clase</label>
+                <select  class="clase" data-update_clase>
+                    <option value="star_wars">Star Wars</option>
+                    <option value="consoles">Consolas</option>
+                    <option value="others">Diversos</option>
+                </select>
+
+                <label for="descripcion">Descripci&oacute;n</label>
+                <textarea  class="descripcion" id="descripcion" data-update_descripcion></textarea>
+                <button class="actualizar form-button" type="submit" id="actualizar" data-update_button >Actualizar</button>
+
+            </form>
+        </section>
+        <contacto-component></contacto-component>
+    </main>
+    <footer-component></footer-component>
+
+    <script src="../components/htmlComponents.js" type="text/javascript"></script>
+    <script src="../components/contact.js" type="module"></script>
+    <script src="../scripts/edit.js" type="module"></script>
 </body>
 </html>

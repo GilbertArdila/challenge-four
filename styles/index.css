@@ -63,6 +63,9 @@ header{
     margin: 0 10px;
     margin-right: 20px;
 }
+.edit .header-up-section .header-button{
+    grid-column: 4/5;
+}
 .header-up-section .header-button{
     width: 133px;
     height: 40px;

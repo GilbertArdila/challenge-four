@@ -1,0 +1,67 @@
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.update{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.update form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.update form label,
+ input,
+textarea,
+select,
+button{
+    margin: 10px auto;
+    
+}
+input,
+textarea,
+select{
+    width: 40%;
+    height: 40px;
+}
+input,
+textarea,
+select{
+    border:1px solid blue;
+    border-radius: 10px;
+}
+textarea{
+    height: 80px;
+}
+.foto{
+    display: none;
+}
+.imagen-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+.imagen-container__button{
+    display: block;
+    align-self: center;
+    padding: 5px;
+    border:none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+}
+.imagenCargada{
+    margin: 10px auto;
+}
