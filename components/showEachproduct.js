@@ -1,17 +1,16 @@
 import { clientServices } from "./clientServices.js";
+import { searcher } from "./searcher.js";
+
 const section = document.querySelector(".main-product")
 const relatedProducts = document.querySelector(".related-products__cards");
-const buscador = document.querySelector(".header-searcher__input")
-const coincidencia = document.querySelector(".coincidencia");
-const textoBusqueda = document.querySelector(".show_coincidences");
+
 let claseProducto;
 //declaramos la lista de productos
 const datos = [];
-
 let id;
-//obtenemos los datros del producto a editar
 
-const datosProducto = async () => {
+//obtenemos los datos del producto a editar
+const obtenerDatosProducto = async () => {
     //obtenemos el id del cliente a actualizar con el id que le pasamos al href en el template de showProducts.js
     const url = new URL(window.location);
     id = url.searchParams.get("id");
@@ -34,9 +33,9 @@ const datosProducto = async () => {
 }
 
 
-datosProducto()
 
-//función para mostrar el producto seleccionado
+
+//función para crear el template del producto seleccionado
 const crearTemplateProducto = (foto, nombre, precio, descripcion, clase, id) => {
     //creamos el div contendor
     const div = document.createElement("div");
@@ -60,6 +59,7 @@ const crearTemplateProducto = (foto, nombre, precio, descripcion, clase, id) => 
     return div;
 
 }
+
 //funcion para captar los datos de todos los productos y mostrar los relacionados con el producto elegido
 clientServices.mostrarProducto().then((data) => {
     data.forEach(producto => {
@@ -93,60 +93,10 @@ clientServices.mostrarProducto().then((data) => {
 
 })
 
+//llamamos la función para obtener los datos del producto
+obtenerDatosProducto()
+//mandamos a llamar la función para mostrar los productos buscados
+
+searcher.busqueda(datos)
 
 
-
-
-
-//funcion para el buscador
-buscador.addEventListener("keyup", () => {
-
-    //vaciamos el template
-    coincidencia.innerHTML = "";
-    const busqueda = buscador.value.toLowerCase();
-
-    //recorremos el objeto productos
-    datos.forEach(producto => {
-        //capturamos las descripciones de cada producto
-        let descripcion = producto.descripcion.toLowerCase();
-
-
-        //buscamos las coincidencias
-        if (descripcion.indexOf(busqueda) !== -1) {
-            textoBusqueda.classList.add("show")
-
-            //adicionamos las cards al section
-            coincidencia.innerHTML += `
-<div class="card busqueda">
-<div class="product-img one">
-<img src="${producto.foto}" alt="${producto.nombre}" class="card-img">
-<a class="delete" href="#"></a>
-<a class="edit" href="#"></a>
-</div>
-<h3 class="title">${producto.nombre}</h3>
-<p class="price">$${producto.precio}</p>
-<p class="id">#${producto.id}</p>
-
-`
-
-
-
-        }
-        //si el buscador no tiene nada escrito
-        if (buscador.value === "") {
-            textoBusqueda.classList.remove("show")
-            var remover = document.querySelector(".busqueda")
-            coincidencia.removeChild(remover);
-
-
-        }
-        //si no se halló coincidencia se quitan los resultados que se venian mostrando hasta el momento
-        if (coincidencia.innerHTML === '') {
-            textoBusqueda.classList.remove("show")
-        }
-
-
-    })
-
-
-})

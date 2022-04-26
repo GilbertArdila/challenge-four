@@ -1,5 +1,6 @@
 import { clientServices } from "./clientServices.js"
-import { verificarFoto } from "./dragZone.js";
+import { verificarFoto } from "./dragZone.js"
+import {mensajes} from "./contact.js"
 //variable para poner la imagen en base64
 let fotoFile;
 //variable para verificar que la imagen se cargue corectamente el el input
@@ -9,6 +10,9 @@ let picture;
 const formulario=document.querySelector("[data-form]");
 //capturamos el area del div para solatar la imagen
 const areaImagen=document.getElementById("dropArea");
+
+const selectedFileInput=document.querySelector("[data-selected]");
+const dragFileInput=document.querySelector("[data-drop]")
 
 //ponemos el formulario a la escucha de un evento imput
 formulario.addEventListener("submit",(evento)=>{
@@ -37,10 +41,12 @@ formulario.addEventListener("submit",(evento)=>{
     picture!="") {
         //mandamos a llamar el método para crear el producto
         clientServices.crearProducto(fotoFile, nombre, precio,  descripcion,clase,).then(respuesta => {
-            alert("El producto se ha creado satisfactoriamente");
+            alert( "El producto se ha creado satisfactoriamente")
+           
         }).catch(error => alert("Se ha producido un error" + error));
     }
 });
+
 //función para verificar los campos del input
 const verificarCampos=(nombre,precio)=>{
     let verificar=true;
@@ -83,8 +89,7 @@ const verificarCampos=(nombre,precio)=>{
      return verificar;
 }
 
-const selectedFileInput=document.querySelector("[data-selected]");
-const dragFileInput=document.querySelector("[data-drop]")
+
 
 
 

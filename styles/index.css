@@ -30,6 +30,10 @@ a{
     text-decoration: none;
     color: var(--main-blue);
 }
+/*esta clase está creada provisionalmente por si es necesario en algun momento acultar algun elemento*/
+.hideElement{
+    display: none;
+}
 /*estilos para las secciones de header, buscador, contacto y footer */
 header{
     width: 100%;
@@ -103,6 +107,7 @@ main .coincidencia{
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     }
      .show_coincidences{
         display: none;
@@ -111,6 +116,15 @@ main .coincidencia{
     }
     main .show{
         display: block;
+    }
+    .busqueda{
+        margin: 10px 10px;
+        width: 176px;
+      
+    }
+    .busqueda p{
+        min-height: 38px;
+        
     }
     
 .contacto{
@@ -212,7 +226,8 @@ footer{
     justify-content: center;
     position: absolute;
     width: 200px;
-    height: 140px;
+    height: auto;
+    min-height: 140px;
     bottom: calc(0);
     left: calc(37%);
     border: 1px solid blue;

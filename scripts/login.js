@@ -1,3 +1,5 @@
+import { mensajes } from "../components/contact.js";
+
 //regex
 const regex_password=new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$#*])(?!.*[ +-/_=]).{6,12}$/)
 
@@ -35,7 +37,7 @@ button.addEventListener("click",(event)=>{
                 }
                
             }else{
-                window.location.href='../index.html';
+                mensajes.mostrarMensajes("Usuario incorrecto","Parece que has introducido mal tus datos de ingreso, por favor verifica")
             }
     })
     }

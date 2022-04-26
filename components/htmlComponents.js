@@ -11,9 +11,6 @@ class   Header extends HTMLElement{
         <section class="header-up-section">
           <img src="../img/Logo.png" alt="logo aluraGeek" class="header-logo">
           <a href="../index.html" class="header-button">Inicio</a>
-          <img src="../img/find.png" alt="buscador" class="header-searcher__logo" id="header-searcher__logo">
-          <input class="header-searcher__input" id="header-searcher__input" placeholder="¿Qué deseas buscar?"></input>
-       
         </section>
         `;
     }
@@ -21,6 +18,7 @@ class   Header extends HTMLElement{
 customElements.define('header-component',Header);
 
 /* **************************************************** */
+//la logíca de este buscador está en index.js
 class searcher extends HTMLElement{
     constructor(){
         super();
@@ -41,7 +39,7 @@ class searcher extends HTMLElement{
 customElements.define('searcher-component',searcher);
 
 /* **************************************************** */
-
+//la validación de datos se encuentra en contac.js
 class Contacto extends HTMLElement{
     constructor(){
         super();
