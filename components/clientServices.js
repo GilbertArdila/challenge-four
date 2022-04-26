@@ -24,7 +24,7 @@ const datosProducto=async (id)=>{
     const respuesta = await fetch(url+`/${id}`);
     return await respuesta.json();
 }
-
+//PUT
 const actualizarProducto=async(foto,nombre,precio,descripcion,clase,id)=>{
     try{
        const respuesta= await fetch(url+`/${id}`,{
@@ -40,11 +40,18 @@ const actualizarProducto=async(foto,nombre,precio,descripcion,clase,id)=>{
     }
 
 }
+//DELETE
+const eliminarProducto=(id)=>{
+    return fetch(url+`/${id}`,{
+        method:"DELETE"
+    })
+}
 
 export const clientServices={
     crearProducto,
     mostrarProducto,
     datosProducto,
-    actualizarProducto
+    actualizarProducto,
+    eliminarProducto
 }
 

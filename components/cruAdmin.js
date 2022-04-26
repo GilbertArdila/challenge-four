@@ -20,7 +20,7 @@ let productos;
     const contenido=`
     <div class="product-img one">
     <img src="${foto}" alt="">
-    <a class="delete" href="#"></a>
+    <a class="delete" href="#" id="${id}"></a>
     <a class="edit" href="../templates/edit.html?id=${id}"></a>
     </div>
     <h3 class="title">${nombre}</h3>
@@ -29,6 +29,20 @@ let productos;
     `
     //agregamos el contenido al div
     div.innerHTML=contenido;
+
+    //capturamos el a para la función eliminar
+    const eliminar=div.querySelector(".delete");
+    eliminar.addEventListener("click",()=>{
+       const id=eliminar.id;
+       const confirmar=confirm("¿Desea eliminar el producto?");
+       if(confirmar){
+         clientServices.eliminarProducto(id).then(respuesta=>{
+             alert("El producto se ha eliminado")
+         }).catch(error=>alert("Ha habido un error al tratar de eliminar el producto"));
+       }
+       
+    })
+
     return div
 
  }

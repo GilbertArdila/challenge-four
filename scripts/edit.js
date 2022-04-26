@@ -65,10 +65,7 @@ update_form.addEventListener("submit",(evento)=>{
 
      if(confirmar){
         clientServices.actualizarProducto(foto,nombre,precio,descripcion,clase,id).then(()=>{
-        
-            window.location.href="../templates/productosAdmin.html"
-            
-           
+        window.location.href="../templates/productosAdmin.html"
         })
      }
    

@@ -1,6 +1,5 @@
 import { clientServices } from "./clientServices.js"
 import { verificarFoto } from "./dragZone.js"
-import {mensajes} from "./contact.js"
 //variable para poner la imagen en base64
 let fotoFile;
 //variable para verificar que la imagen se cargue corectamente el el input
@@ -39,11 +38,16 @@ formulario.addEventListener("submit",(evento)=>{
   //verificamos los campos nombre, precio y clase
     if (verificarCampos(nombre, precio, clase) === true &&
     picture!="") {
-        //mandamos a llamar el método para crear el producto
+       const confirmar= confirm("¿Desea crear el producto?")
+        if(confirmar){
+            //mandamos a llamar el método para crear el producto
         clientServices.crearProducto(fotoFile, nombre, precio,  descripcion,clase,).then(respuesta => {
-            alert( "El producto se ha creado satisfactoriamente")
+           window.location.href="../templates/productosAdmin.html"
            
         }).catch(error => alert("Se ha producido un error" + error));
+
+        }
+        
     }
 });
 
