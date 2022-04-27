@@ -111,6 +111,7 @@ main .coincidencia{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     }
      .show_coincidences{
         display: none;
@@ -238,10 +239,12 @@ footer{
     background-color: white;
     padding: 10px;
 }
+
 .messages-container__body{
     margin: 10px auto;
 }
-.messages-container__buton{
+.messages-container__buton
+{
     width: 50%;
     border: 1px solid blue;
     border-radius: 10px;
@@ -249,6 +252,7 @@ footer{
     padding: 10px;
     margin-bottom: 10px;
 }
+
 
 @media (min-width:768px){
     .header-up-section {

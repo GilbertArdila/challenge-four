@@ -94,6 +94,7 @@ body{
     flex-direction: column;
     width: 176px;
     height: auto;
+    margin: 10px auto;
 }
 .photo img{
 width: 100%;

@@ -4,6 +4,8 @@ const mensaje=document.querySelector("#mensaje");
 const formButon=document.querySelector(".btn");
 const avisoNombre=document.querySelector(".avisoNombre");
 const avisoMensaje=document.querySelector(".avisoMensaje");
+const mail=document.querySelector("#email");
+const avisoMail=document.querySelector(".avisoMail")
 
 
 /*Función para validar los campos del contactForm*/
@@ -22,8 +24,14 @@ const formValidation=()=>{
    }else{
     avisoMensaje.innerText="";
    }
-   if(nombre.value!="" && (mensaje.value!="" || mensaje.value!=undefined)){
-       mostrarMensajes("Exito!","Tu mensaje se ha enviado correctamente");
+   if(mail.value===""){
+       avisoMail.style.color="red";
+       avisoMail.innerText="Ingresa tu mail por favor"
+   }else{
+    avisoMail.innerText="";
+   }
+   if(nombre.value!="" && mail.value!="" &&(mensaje.value!="" || mensaje.value!=undefined)){
+       mostrarMensajes("Exito!","Tu mensaje se ha enviado correctamente","#");
        contactForm.reset()
    }
 
@@ -33,7 +41,7 @@ formButon.addEventListener("click",formValidation);
 /* función para mostrar mensaje de enviado */
 
 
- const mostrarMensajes=(titulo,body)=>{
+ const mostrarMensajes=(titulo,body,pageAdress)=>{
     const container=document.createElement("div");
     container.classList.add("messages-container");
 
@@ -50,9 +58,11 @@ formButon.addEventListener("click",formValidation);
     const botonMensaje=document.querySelector(".messages-container__buton")
      botonMensaje.addEventListener("click",function(){
         section.removeChild(container)
+        window.location.href=pageAdress;
      })
 }
-export const mensajes={
-    mostrarMensajes
-}
 
+
+export const mensajes={
+    mostrarMensajes,
+}

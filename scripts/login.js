@@ -37,7 +37,7 @@ button.addEventListener("click",(event)=>{
                 }
                
             }else{
-                mensajes.mostrarMensajes("Usuario incorrecto","Parece que has introducido mal tus datos de ingreso, por favor verifica")
+                mensajes.mostrarMensajes("Usuario incorrecto","Parece que has introducido mal tus datos de ingreso, por favor verifica","../index.html")
             }
     })
     }
@@ -71,6 +71,7 @@ function verificar(){
         mensajePassword.innerText=""
         
     }
+    
 }
 
 

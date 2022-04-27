@@ -34,8 +34,9 @@ let productos;
     const eliminar=div.querySelector(".delete");
     eliminar.addEventListener("click",()=>{
        const id=eliminar.id;
-       const confirmar=confirm("¿Desea eliminar el producto?");
-       if(confirmar){
+       let respuesta=confirm("¿Desea eliminar el producto?")
+       if(respuesta){
+         
          clientServices.eliminarProducto(id).then(respuesta=>{
              alert("El producto se ha eliminado")
          }).catch(error=>alert("Ha habido un error al tratar de eliminar el producto"));
@@ -53,7 +54,7 @@ clientServices.mostrarProducto().then((data) => {
     datos.push(data);
     productos = datos[0]
     //llamamos la función para el buscador pasandole como parámetro la lista de productos
-    searcher.busqueda(productos)
+    searcher.busquedaEditar(productos)
 
     //recorremos la respuesta para pintar cada card
     data.forEach(({ foto, nombre, precio, descripcion, clase, id }) => {

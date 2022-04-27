@@ -38,7 +38,7 @@ formulario.addEventListener("submit",(evento)=>{
   //verificamos los campos nombre, precio y clase
     if (verificarCampos(nombre, precio, clase) === true &&
     picture!="") {
-       const confirmar= confirm("¿Desea crear el producto?")
+       const confirmar=confirm("¿Desea crear el producto?");
         if(confirmar){
             //mandamos a llamar el método para crear el producto
         clientServices.crearProducto(fotoFile, nombre, precio,  descripcion,clase,).then(respuesta => {
