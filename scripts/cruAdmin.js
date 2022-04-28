@@ -1,5 +1,5 @@
-import { searcher } from "./searcher.js";
-import { clientServices } from "./clientServices.js";
+import { searcher } from "../components/searcher.js";
+import { clientServices } from "../components/clientServices.js";
 
 const url=' http://localhost:3000/producto';
 //obtenemos los elementos del html

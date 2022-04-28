@@ -1,5 +1,5 @@
-import { clientServices } from "./clientServices.js";
-import { searcher } from "./searcher.js";
+import { clientServices } from "../components/clientServices.js";
+import { searcher } from "../components/searcher.js";
 
 const section = document.querySelector(".main-product")
 const relatedProducts = document.querySelector(".related-products__cards");

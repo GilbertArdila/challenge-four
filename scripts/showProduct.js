@@ -1,5 +1,5 @@
-import { clientServices } from "./clientServices.js";
-import { searcher } from "./searcher.js";
+import { clientServices } from "../components/clientServices.js"; 
+import { searcher } from "../components/searcher.js";
 
 //lista para guardar los productos que nos trae el llamado a mostrarProducto
 const datos = [];
