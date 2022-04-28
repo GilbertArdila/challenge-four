@@ -1,6 +1,12 @@
 import { clientServices } from "../components/clientServices.js";
 import { searcher } from "../components/searcher.js";
 
+
+(()=>{
+
+
+
+
 const section = document.querySelector(".main-product")
 const relatedProducts = document.querySelector(".related-products__cards");
 
@@ -99,4 +105,4 @@ obtenerDatosProducto()
 
 searcher.busqueda(datos)
 
-
+})();

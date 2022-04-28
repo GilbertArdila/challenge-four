@@ -1,5 +1,10 @@
 import { mensajes } from "../components/contact.js";
 
+(()=>{
+
+
+
+
 //regex
 const regex_password=new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$#*])(?!.*[ +-/_=]).{6,12}$/)
 
@@ -75,3 +80,4 @@ function verificar(){
 }
 
 
+})();

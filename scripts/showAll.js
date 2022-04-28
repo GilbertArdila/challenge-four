@@ -1,6 +1,12 @@
 import { searcher } from "../components/searcher.js";
 import { clientServices } from "../components/clientServices.js";
 
+
+(()=>{
+
+
+
+
 const url=' http://localhost:3000/producto';
 
 //guardamos el valor del sessionStora en una variable para saber que imagenes debemos mostrar
@@ -78,6 +84,6 @@ const datos = [];
        
 
     
-    
+})();   
 
 

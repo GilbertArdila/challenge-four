@@ -1,5 +1,11 @@
 import { clientServices } from "../components/clientServices.js"
 import { verificarFoto } from "../components/dragZone.js"
+
+(()=>{
+
+
+
+
 //variable para poner la imagen en base64
 let fotoFile;
 //variable para verificar que la imagen se cargue corectamente el el input
@@ -182,3 +188,4 @@ areaImagen.addEventListener("drop",(evento)=>{
 
 
 
+})();

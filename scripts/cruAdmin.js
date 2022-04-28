@@ -1,6 +1,12 @@
 import { searcher } from "../components/searcher.js";
 import { clientServices } from "../components/clientServices.js";
 
+
+(()=>{
+
+
+
+
 const url=' http://localhost:3000/producto';
 //obtenemos los elementos del html
 const section=document.querySelector(".crud-cards");
@@ -70,4 +76,4 @@ clientServices.mostrarProducto().then((data) => {
      
    
    }).catch((error) => alert("Ha ocurrido un error en el crud"))
-  
+})();

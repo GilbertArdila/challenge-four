@@ -1,6 +1,11 @@
 import { clientServices } from "../components/clientServices.js"; 
 import { searcher } from "../components/searcher.js";
 
+
+(()=>{
+
+
+
 //lista para guardar los productos que nos trae el llamado a mostrarProducto
 const datos = [];
 
@@ -80,7 +85,7 @@ clientServices.mostrarProducto().then((data) => {
 }).catch((error) => alert("Ha ocurrido un error !!!"))
 
 
-
+})();
 
 
 
